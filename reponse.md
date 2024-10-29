@@ -17,8 +17,16 @@ while reponse != nombre_a_trouver:
 ## 1.1 initialisation
 ```python
 nom_dictionnaire={}
+
+
 ```
-## 1.2 
+## 1.2 afficher les clefs puis les valeurs
+``` python
+for clef,valeur in ulysse.items() :
+    print('clef:',clef,'valeur:',valeur)
+    
+ ```
+
 
 # Devoirs 
 - 1. Le programme choisit un mot au hasard d’un dictionnaire de mots et d’indices.
