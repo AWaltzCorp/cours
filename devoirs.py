@@ -1,25 +1,20 @@
 import random
 words=["hello","world","Python"]
-wordchosen=''
-hint=''
+hints=['a word to say hi','the planet','a powerful programming language']
 number=random.randint(0,2)
-if number==0 :
-    wordchosen=words[0]
-    hint='a word to say hi'
-if number==1 :
-    wordchosen=words[1]
-    hint='the planet'
-if number==2 :
-    wordchosen=words[2]
-    hint='a powerful programming language'
+wordChosen=words[number]
+hintChosen=hints[number]
+
 def main() :
-    utilisateur=input("devinez le mot")
-    if utilisateur==number :
-     print ('bravo')
-    if utilisateur !=wordchosen: 
-     print (hint)
-     main()
-main()
+    choixUtilisateur=input("devinez le mot")
+    while choixUtilisateur!= wordChosen :
+        print(hintChosen)
+        choixUtilisateur=input("devinez le mot")
+        
+try :    
+    main()
+except KeyboardInterrupt :
+    print('Ctrl +C hit')
    
     
     
