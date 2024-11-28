@@ -1,6 +1,6 @@
 # import modules
 import random
-#mots
+#liste 
 words=["hello","world","python","tree","conversly","three","congatrulations","apple"]
 # tirage au sort
 wordChosen=words[random.randint(0,7)]
@@ -15,14 +15,14 @@ for i in range(len(wordChosen)):
 for i in range(nombreVie):
 # input
     lettreChoisie=input("Devinez une lettre: ")
-# Si la lettre de l'utilisateur est dans le mot alors le signaler
+
     if  lettreChoisie in wordChosen:
-        print("lettre trouvée!")
+        print("lettre trouvée!") # Si la lettre de l'utilisateur est dans le mot alors le signaler
         for j in range(len(wordChosen)):
             if lettreChoisie == wordChosen[j]:
                 motActuel[j] = lettreChoisie
     # si le mot est complet alors afficher le mot
-    if "".join(motActuel) == wordChosen:
+    if "".join(motActuel) == wordChosen: # transformation en chaîne de caractères de mot actuel
         print("Vous avez trouvé:", motActuel)
         break
     print("Vous en êtes là :", motActuel)

@@ -14,6 +14,7 @@ while reponse != nombre_a_trouver:
         print("Bravo, tu as trouvé le nombre !")
 ````
 # Les dictionnaires
+lien[https://courspython.com/dictionnaire.html]
 ## 1.1 initialisation
 ```python
 nom_dictionnaire={}

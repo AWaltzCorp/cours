@@ -1,9 +1,16 @@
-# Debut 
-voitures = {
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
     
 }
-voitures['clio'] = 'bleu'
-voitures['puissance']=200
-print(voitures)
-for cle, valeur in voitures.items() :
-    print(cle,valeur)
+employees["Max"]["age"]=23
+#print(employees["Max"])
+#for clefs,valeurs in employees.items():
+#   print(valeurs["age"])
+print(employees["Max"]["age"])
