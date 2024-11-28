@@ -28,10 +28,69 @@ for clef,valeur in ulysse.items() :
     
  ```
 
+## 1.3 afficher uniquement une valeur 
+``` python
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+employees["Max"]["age"]=23
+#print(employees["Max"])
+#for clefs,valeurs in employees.items():
+#   print(valeurs["age"])
+print(employees["Max"]["age"])
+
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+# J'affiche
+print(employees["Max"]["age"])
+```
 
 
-# Devoirs 
-- 1. Le programme choisit un mot au hasard d’un dictionnaire de mots et d’indices.
-- 2. À chaque tour, le joueur reçoit un indice pour deviner un mot.
-- 3. S’il trouve le mot, il gagne ! Sinon, il peut retenter jusqu'à épuiser les mots sans indices reçus.
-        
+## modifier
+``` python
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+employees["Max"]["age"]=23
+```
+
+# Les listes
+## Transformer une liste en chaîne de caractères.
+```python
+mot=["is","s"]
+"".join(mot)
+```
+
+
+
+
+
+
+
+
+
