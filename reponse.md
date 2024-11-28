@@ -30,8 +30,3 @@ for clef,valeur in ulysse.items() :
 ## Pand
 
 
-# Devoirs 
-- 1. Le programme choisit un mot au hasard d’un dictionnaire de mots et d’indices.
-- 2. À chaque tour, le joueur reçoit un indice pour deviner un mot.
-- 3. S’il trouve le mot, il gagne ! Sinon, il peut retenter jusqu'à épuiser les mots sans indices reçus.
-        
