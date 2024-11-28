@@ -27,6 +27,7 @@ for clef,valeur in ulysse.items() :
     print('clef:',clef,'valeur:',valeur)
     
  ```
+
 ## 1.3 afficher uniquement une valeur 
 ``` python
 employees={
