@@ -27,6 +27,69 @@ for clef,valeur in ulysse.items() :
     print('clef:',clef,'valeur:',valeur)
     
  ```
-## Pand
+## 1.3 afficher uniquement une valeur 
+``` python
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+employees["Max"]["age"]=23
+#print(employees["Max"])
+#for clefs,valeurs in employees.items():
+#   print(valeurs["age"])
+print(employees["Max"]["age"])
+
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+# J'affiche
+print(employees["Max"]["age"])
+```
+
+
+## modifier
+``` python
+employees={
+    "Max":{
+        "age":51,
+        "job":"CEO"
+    },
+    "Francis":{
+        "age":18,
+        "job":"Secretary"
+    }
+    
+}
+employees["Max"]["age"]=23
+```
+
+# Les listes
+## Transformer une liste en chaîne de caractères.
+```python
+mot=["is","s"]
+"".join(mot)
+```
+
+
+
+
+
+
+
 
 
