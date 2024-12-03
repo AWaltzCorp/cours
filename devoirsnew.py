@@ -6,6 +6,8 @@ words={
 wordFound=False
 choice=random.choice(list(words.keys()))
 print(choice)
+
+    
 while wordFound==False:
     userChoise=input('essayez de devinez')
     if userChoise==choice :
