@@ -1,4 +1,4 @@
-# Correction main .py
+# Correction main.py
 ``` python
 nombre_a_trouver = random.randint(1, 20)
 reponse = None
