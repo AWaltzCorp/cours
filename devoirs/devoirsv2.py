@@ -16,6 +16,7 @@ for _ in range(3):
         print("Bonne réponse !")
     else :
       print("mauvaise réponse")
+      print(quiz.get(question))
 print("vous avez obtenu  "+str(points)+"/3")
 
 
