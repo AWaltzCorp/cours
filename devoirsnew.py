@@ -9,10 +9,10 @@ print(choice)
 
     
 while wordFound==False:
-    userChoise=input('essayez de devinez')
+    userChoise=input('essayez de devinez: ')
     if userChoise==choice :
         wordFound=True
         print('bravo')
         break
-    if userChoise !=choice:
+    else :
         print(words[choice])
