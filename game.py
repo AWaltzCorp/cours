@@ -26,23 +26,23 @@ marchandises={
     
 }
 def print_marchandises():
-    print(marchandises)
-def buy(items_to_buy,) :
+    print("Price of the gold:",str(marchandises["or"]["prix"])+"\n"+"Price of the silver : ",str(marchandises["argent"]["prix"])+"\n")
+def buy(items_to_buy,quantity) :
     global money
     if money-marchandises[items_to_buy]["prix"]<0:
         print("Not enough money") 
     else :
         try:
-            money-=marchandises[items_to_buy]["prix"]
-            marchandises[items_to_buy]["stock"]+=1
+            money-=marchandises[items_to_buy]["prix"]*quantity
+            marchandises[items_to_buy]["stock"]+=quantity
         except KeyError :
             print('no items')
-def sell(items_to_sell) :
+def sell(items_to_sell,quantity) :
     global money
-    if marchandises[items_to_sell]["stock"]>0:
+    if marchandises[items_to_sell]["stock"]>=quantity:
         try : 
-            marchandises[items_to_sell]["stock"]-=1
-            money+=marchandises[items_to_sell]["price"]
+            marchandises[items_to_sell]["stock"]-=quantity
+            money+=marchandises[items_to_sell]["price"]*quantity
         except KeyError:
             print("no items")
             
