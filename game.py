@@ -8,6 +8,7 @@ Rendre plus esthétique les affichages de texte
 """
 import random
 money=100
+MONEY_INITIAL=100
 marchandises={
     "gold":{
         "stock":0,
@@ -25,6 +26,16 @@ marchandises={
     
     
 }
+def end_game () :
+    for value in marchandises.values():
+        money+value["stock"]*value["price"]
+    if MONEY_INITIAL>money :
+        print('Vous avez perdu',str(MONEY_INITIAL-money))
+    elif MONEY_INITIAL<money :
+        print('Vous avez gagné ', str(money-MONEY_INITIAL))
+    else :
+        print("Match nul")
+            
 def print_marchandises():
     print("Here are the caractestics of our products :") 
     for clef,valeur in marchandises.items() :
@@ -65,7 +76,8 @@ for _ in range(10):
         item_to_sell=input('item to sell :')
         sell(item_to_sell)
     print(money)
-print("Tu a gagné/ perdu"+""+str(money-100))
+end_game()
+
         
    
    
