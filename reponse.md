@@ -85,12 +85,21 @@ employees["Max"]["age"]=23
 mot=["is","s"]
 "".join(mot)
 ```
+# Coventions
+```python
+nom_de_la_fonction
+maVariable
+MACONSTANTE
 
+```
 
+# fonction 
+## On peut indiquer le type d'un argument et le result d'une foction
+``` 
+def addition_six(nombre: int) -> int:
+    return nombre + 6
 
-
-
-
+somme = addition_six(2)
 
 
 

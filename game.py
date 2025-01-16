@@ -1,3 +1,4 @@
+
 """
 Manque de commentaires
 Modifier la fonction d'affichage des marchandises
@@ -71,4 +72,3 @@ print("Tu a gagné/ perdu"+""+str(money-100))
     
             
     
-  
