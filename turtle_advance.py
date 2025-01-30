@@ -1,7 +1,11 @@
 import turtle
 t=turtle.Turtle()
 screen = turtle.Screen()
-
+point = turtle.Turtle()
+point.penup()
+point.shape("circle")
+point.color("red")
+point.goto(100, 100)  # Position du point rouge
 def up () :
     t.setheading(90)
     t.forward(20)
