@@ -2,6 +2,7 @@ import turtle
 # Initialisation
 t = turtle.Turtle()
 screen = turtle.Screen()
+screen.title("Exemple de dessin")
 # Déplacement simple
 t.right(90)
 t.forward(100)
