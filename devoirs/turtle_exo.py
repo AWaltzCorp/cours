@@ -1,11 +1,16 @@
 import turtle
 # Initialisation
 t = turtle.Turtle()
+screen = turtle.Screen()
 # Déplacement simple
-t.forward(100)  # Avance de 100 unités
-t.right(90)     # Tourne à droite de 90°
-t.forward(50)   # Avance de 50 unités
+t.right(90)
+t.forward(100)
+t.left(180)
+t.forward(50)
+t.right(90)
+t.forward(50)
 t.left(90)
-t.forward(70)
-
-turtle.done()
+t.forward(50)
+t.right(180)
+t.forward(100)
+screen.mainloop()
