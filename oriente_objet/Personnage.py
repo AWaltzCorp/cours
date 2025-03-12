@@ -1,4 +1,4 @@
-class Personnage ():
+class Personnage :
     def __init__(self,nom,taille,age):
         self.nom = nom
         self.taille = taille    
@@ -8,3 +8,4 @@ class Personnage ():
     def grandir(self,taille,age):
         self.taille=taille
         self.age=age
+                      
