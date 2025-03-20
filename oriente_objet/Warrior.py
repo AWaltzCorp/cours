@@ -1,15 +1,32 @@
-"""
-optimiser les code en utilisant les notions aprises
-"""
-#  
+""""
+S'occuper des classes filles en ajoutant des objets avec le add-weapon() de Warrior
+Ajouter des armes à l'inventaire de tes personnages
 
+"""
 import random
+class Inventory :
+    def __init__(self):
+        self.weapon=dict()
+        self.epic_weapon=set()
+    def add_weapon(self,name,quantity=1) :
+        self.weapon[name]+=quantity
+    def del_weapon(self,name,quantity):
+        if name in self.weapon :
+            self.object[name]-=quantity
+        else :
+            del self.object[name]
+    def add_epic_object(self,name) :
+        self.epic_weapon.add(name)
 class Warrior :
-
     def __init__(self,nom):
+        self.inventory=Inventory()
         self.nom=nom
         self.pv=1000
         self.is_alive=True
+    def add_weapon(self,name,quantity=1) :
+        self.inventory.weapon[name] = quantity
+        
+        
     def show_pv (self):
         print(f"J'ai {self.pv} pv!")
         
@@ -29,11 +46,7 @@ class Warrior :
 
 class Elf(Warrior):
     def __init__(self,nom):
-        self.bow = random.choice(["leather bow", "iron bow","wood bow"])
         super().__init__(nom)
-        
-       
-
     def arrow (self,victim):
         if self.bow== "leather bow" :
             damage=random.randint(10,15)
