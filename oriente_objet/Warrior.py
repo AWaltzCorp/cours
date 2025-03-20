@@ -77,12 +77,6 @@ class Aid (Warrior) :
         victim.pv+=heal_amount
         print(f'{self.nom} a guéri {victim.nom} de {heal_amount}pv')
     
-
-    
-    
-    
-        
-
 Legolas=Elf('Legolas')
 Sauron=Troll('Sauron')
 Mary=Aid('Mary')
