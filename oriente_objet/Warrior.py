@@ -1,6 +1,6 @@
 import random
 from time import sleep
-#h
+#hh
 class Inventory:
     def __init__(self):
         self.weapon = dict()
