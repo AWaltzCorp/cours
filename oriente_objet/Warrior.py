@@ -121,4 +121,4 @@ if Legolas.verify_if_alive():
     print("Legolas a gagné")
 else:
     print("Sauron a gagné")
-sleep(10)
+sleep(12)
