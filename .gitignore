@@ -3,3 +3,4 @@ env
 __pycache__
 codeql-custom-queries-python
 .vscode
+output
