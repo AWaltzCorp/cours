@@ -6,7 +6,7 @@ class Inventory:
         self.epic_weapon = set()
 
     def add_weapon(self, name, quantity=1):
-        self.weapon[name] = self.weapon.get(name) + quantity
+        self.weapon[name] = self.weapon.get(name, 0) + quantity
 
     def del_weapon(self, name, quantity):
         if name in self.weapon:
@@ -51,11 +51,11 @@ class Elf(Warrior):
         super().__init__(nom)
         bow_type = random.choice(["leather bow", "wood bow", "iron bow"])
         if bow_type == "leather bow":
-            self.add_weapon("leather bow", random.randint(15, 20))
+            self.add_weapon("leather bow", random.randint(15, 25))
         elif bow_type == "wood bow":
-            self.add_weapon("wood bow", random.randint(20, 25))
+            self.add_weapon("wood bow", random.randint(30, 35))
         elif bow_type == "iron bow":
-            self.add_weapon("iron bow", random.randint(25, 30))
+            self.add_weapon("iron bow", random.randint(40, 45))
 
     def arrow(self, victim):
         for bow, damage in self.inventory.weapon.items():
@@ -73,12 +73,13 @@ class Troll(Warrior):
         if self.shield == "wood":
             if self.pv <= 100:
                 self.pv += 5
-            damage = random.randint(15, 25)
+            damage = random.randint(10, 20)
             victim.pv -= damage
             print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
         if self.shield == "iron":
-              
-            damage = random.randint(25, 30)
+            if self.pv <= 100:
+                self.pv += 10
+            damage = random.randint(10, 20)
             victim.pv -= damage
             print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
 
@@ -88,10 +89,9 @@ class Aid(Warrior):
         super().__init__(nom)
 
     def aid(self, victim):
-        heal_amount = random.randint(1, 10)
-        if victim.pv<=100:
-            victim.pv += heal_amount
-            print(f'{self.nom} a guéri {victim.nom} de {heal_amount}pv')
+        heal_amount = random.randint(1, 15)
+        victim.pv += heal_amount
+        print(f'{self.nom} a guéri {victim.nom} de {heal_amount}pv')
 
 
 # Création des personnages
