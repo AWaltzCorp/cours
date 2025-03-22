@@ -47,38 +47,40 @@ class Warrior :
 class Elf(Warrior):
     def __init__(self,nom):
         super().__init__(nom)
+        self.add_weapon(self,random.choice(["leather bow","wood bow","iron bow"]))
+        if  "leather bow" in self.inventory.weapon :
+            self.inventory.weapon["leather bow"]=random.randint(15,25)
+        if  "wood bow"in self.inventory.weapon :
+            self.inventory.weapon["wood bow"]=random.randint(30,35)
+        if  "iron bow" in self.inventory.weapon :
+            self.inventory.weapon["iron bow"]=random.randint(40,45)
+
     def arrow (self,victim):
-        if self.bow== "leather bow" :
-            damage=random.randint(10,15)
-            victim.pv-=damage
-            print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
-        if self.bow== "wood bow" :
-            damage=random.randint(20,25)
-            victim.pv-=damage
-            print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
-        if self.bow== "iron bow" :
-            damage=random.randint(10,30)
-            victim.pv-=damage
-            print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
-   
-
-
+        if  "leather bow" in self.inventory.weapon :
+            
+            victim.pv-=self.inventory.weapon["leather bow"]
+            print(f"{self.nom} attaque {victim.nom} et inflige {self.inventory.weapon["leather bow"]} dégâts !")
+        if  "wood bow"in self.inventory.weapon :
+            
+            victim.pv-=self.inventory.weapon["wood bow"]
+            print(f"{self.nom} attaque {victim.nom} et inflige {self.inventory.weapon["wood bow"]} dégâts !")
+        if  "iron bow" in self.inventory.weapon :
+            victim.pv-=self.inventory.weapon["iron bow"]
+            print(f"{self.nom} attaque {victim.nom} et inflige {self.inventory.weapon["iron bow"]} dégâts !")
 class Troll(Warrior):
     def __init__(self,nom, ):
-        
         super().__init__(nom)
-        
         self.shield=random.choice(["wood","iron"])
-
-    
     def pickaxe (self,victim):
         if self.shield =="wood":
-            self.pv+=5
+            if self.pv<=100:
+                self.pv+=5
             damage=random.randint(10,20)
             victim.pv-=damage
             print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
         if self.shield =="iron":
-            self.pv+=10
+            if self.pv<=100:
+                self.pv+=10
             damage=random.randint(10,20)
             victim.pv-=damage
             print(f"{self.nom} attaque {victim.nom} et inflige {damage} dégâts !")
@@ -86,13 +88,13 @@ class Aid (Warrior) :
     def __init__(self, nom):
         super().__init__(nom)
     def aid (self,victim):
-        heal_amount=random.randint(1,5)
+        heal_amount=random.randint(1,15)
         victim.pv+=heal_amount
         print(f'{self.nom} a guéri {victim.nom} de {heal_amount}pv')
     
 Legolas=Elf('Legolas')
 Sauron=Troll('Sauron')
-Mary=Aid('Mary')
+
 Elisabeth=Aid('Elisabeth')
 while Legolas.verify_if_alive() and Sauron.verify_if_alive():
 
@@ -103,7 +105,7 @@ while Legolas.verify_if_alive() and Sauron.verify_if_alive():
 
     else :
         Sauron.pickaxe(Legolas)
-    Mary.aid(Sauron)
+
     action = random.choice(["punch", "arrow"])
     if action=="punch":
         Legolas.punch(Sauron)
