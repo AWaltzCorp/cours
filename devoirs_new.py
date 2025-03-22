@@ -17,4 +17,5 @@ Le joueur peut acheter, vendre ou passer son tour.
 Les prix des marchandises changent aléatoirement (utiliser random).
 Un compteur limite le jeu à 10 tours.
 À la fin, le programme affiche les gains du joueur.
+s
 """
